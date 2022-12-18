@@ -12,7 +12,10 @@ const {
   Dimensions,
   I18nManager,
 } = ReactNative;
-const { ViewPropTypes } = require("deprecated-react-native-prop-types");
+const {
+  ViewPropTypes,
+  TextPropTypes,
+} = require("deprecated-react-native-prop-types");
 const Button = require("./Button");
 const vPropTypes = ViewPropTypes || View.propTypes;
 const WINDOW_WIDTH = Dimensions.get("window").width;
@@ -29,7 +32,7 @@ const ScrollableTabBar = createReactClass({
     style: vPropTypes.style,
     tabStyle: vPropTypes.style,
     tabsContainerStyle: vPropTypes.style,
-    textStyle: Text.propTypes.style,
+    textStyle: TextPropTypes.style,
     renderTab: PropTypes.func,
     underlineStyle: vPropTypes.style,
     onScroll: PropTypes.func,
